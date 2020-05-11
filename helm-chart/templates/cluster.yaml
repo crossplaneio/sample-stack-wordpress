@@ -13,6 +13,7 @@ metadata:
     # Using Helm's rand function won't work here because we run `helm template`
     # in each reconcile and this would cause a new name to be generated in each.
     crossplane.io/external-name: {{ .Release.Name }}
+    templatestacks.crossplane.io/deletion-priority: "1"
 spec:
   writeConnectionSecretToRef:
     name: {{ .Release.Name }}-cluster
