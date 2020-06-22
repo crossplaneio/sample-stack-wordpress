@@ -1,16 +1,12 @@
-version: 0.1.0
+version: 0.2.0
 configSections:
-- title: Provision Details
+- title: Wordpress Settings
   items:
-  - name: provisionPolicy
-    controlType: singleSelect
-    path: .spec.provisionPolicy
-    title: Provision Policy
+  - name: image
+    controlType: singleInput
+    type: string
+    path: .spec.image
+    title: Wordpress Container Image
     default:
-    - 'ProvisionNewCluster'
-    enum:
-    - 'ProvisionNewCluster'
-    - 'UseExistingTarget'
-    validation:
-    - required: true
+    - 'wordpress:4.6.1-apache'
 initialConfig: true

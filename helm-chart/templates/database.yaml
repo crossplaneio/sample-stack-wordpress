@@ -9,4 +9,4 @@ spec:
   # to export it under. This is the name of the secret
   # in the crossplane cluster, and it's scoped to this claim's namespace.
   writeConnectionSecretToRef:
-    name: sql
+    name: {{ .Release.Name }}-sql

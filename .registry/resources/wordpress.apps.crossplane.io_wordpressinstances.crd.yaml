@@ -38,16 +38,8 @@ spec:
               description: Image will be used as image of the container that Wordpress
                 runs in. If not specified, the default will be used.
               type: string
-            provisionPolicy:
-              description: ProvisionPolicy indicates whether Wordpress should be deployed
-                to an existing Kubernetes cluster or to provision a new cluster.
-              enum:
-              - ProvisionNewCluster
-              - UseExistingTarget
-              type: string
           type: object
       type: object
-  version: v1alpha1
   versions:
   - name: v1alpha1
     served: true

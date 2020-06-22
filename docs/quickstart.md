@@ -439,8 +439,6 @@ kind: WordpressInstance
 metadata:
   namespace: workspace1
   name: my-cool-app
-spec:
-  provisionPolicy: ProvisionNewCluster
 ```
 
 Then apply it:
