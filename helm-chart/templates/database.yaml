@@ -1,6 +1,6 @@
 ---
-apiVersion: database.crossplane.io/v1alpha1
-kind: MySQLInstance
+apiVersion: common.crossplane.io/v1alpha1
+kind: MySQLInstanceRequirement
 metadata:
   name: {{ .Release.Name }}-sql
 spec:

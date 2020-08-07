@@ -1,6 +1,5 @@
-{{ if ne (.Values.provisionPolicy | default "ProvisionNewCluster") "UseExistingTarget" }}
-apiVersion: compute.crossplane.io/v1alpha1
-kind: KubernetesCluster
+apiVersion: common.crossplane.io/v1alpha1
+kind: KubernetesClusterRequirement
 metadata:
   name: {{ .Release.Name }}-cluster
   labels:
@@ -16,5 +15,4 @@ metadata:
 spec:
   writeConnectionSecretToRef:
     name: {{ .Release.Name }}-cluster
-{{ end }}
 
